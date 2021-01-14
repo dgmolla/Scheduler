@@ -1,8 +1,9 @@
 import Course from './course';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { ScrollView, StyleSheet, View } from 'react-native';
 
 const CourseList = ({courses}) => (
-  <ScrollView style={styles.courseList}>
+  <ScrollView contentContainerStyle={styles.courseList}>
     {courses.map(course => <Course key={course.id} course={course} />)}
   </ScrollView>
 );
@@ -16,3 +17,5 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   }
 });
+
+export default CourseList;

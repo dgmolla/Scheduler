@@ -35,8 +35,8 @@ const Banner = ({title}) => (
 const App = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <Banner title={schedule.title} \>
-      <CourseList courses={schedule.courses} \>
+      <Banner title={schedule.title}/>
+      <CourseList courses={schedule.courses}/>
     </SafeAreaView>
   );
 }
@@ -44,7 +44,7 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#00f',
+    backgroundColor: '#fafafa',
     alignItems: 'center',
     justifyContent: 'center',
   },
