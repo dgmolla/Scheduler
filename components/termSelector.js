@@ -23,6 +23,18 @@ const TermSelector = ({selectedTerm, setSelectedTerm}) => (
   </View>
 );
 
+const termButtonBase = {
+  flex: 1,
+  borderRadius: 5,
+  justifyContent: 'center',
+  alignItems: 'center',
+  margin: 10,
+  height: 40,
+  padding: 10,
+  minWidth: 90,
+  maxWidth: 90,
+}
+
 const styles = StyleSheet.create({
   termSelector: {
     flexDirection: 'row',
@@ -30,15 +42,7 @@ const styles = StyleSheet.create({
     width: 350,
   },
   termButton: {
-    flex: 1,
-    borderRadius: 5,
-    justifyContent: 'center',
-    alignItems: 'center',
-    margin: 10,
-    height: 40,
-    padding: 10,
-    minWidth: 90,
-    maxWidth: 90,
+    ...termButtonBase,
     backgroundColor: '#4f9f64',
   },
   termText: {
@@ -46,15 +50,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
   },
   termButtonActive: {
-   flex: 1,
-   borderRadius: 5,
-   justifyContent: 'center',
-   alignItems: 'center',
-   margin: 10,
-   height: 40,
-   padding: 10,
-   minWidth: 90,
-   maxWidth: 90,
+   ...termButtonBase,
    backgroundColor: '#105f25',
  },
 });
