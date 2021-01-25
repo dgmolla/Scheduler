@@ -11,7 +11,7 @@ const getCourseTerm = course => (
   termMap[course.id.charAt(0)]
 );
 
-const CourseList = ({courses}) => {
+const CourseList = ({courses, view}) => {
   const [selectedTerm, setSelectedTerm] = useState('Fall');
   const termCourses = courses.filter(course => selectedTerm === getCourseTerm(course));
 
@@ -19,7 +19,7 @@ const CourseList = ({courses}) => {
     <View>
       <TermSelector selectedTerm={selectedTerm} setSelectedTerm={setSelectedTerm} />
       <ScrollView contentContainerStyle={styles.courseList}>
-        <CourseSelector courses={termCourses} />
+        <CourseSelector courses={termCourses} view={view} />
       </ScrollView>
     </View>
   );
