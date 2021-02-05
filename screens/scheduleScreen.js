@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from 'react';
 import CourseEditScreen from './courseEditScreen';
 import {firebase} from '../firebase.js'
 import CourseList from '../components/courseList';
-import UserContext from '../userContext.js';
+import UserContext from '../UserContext.js';
 import { SafeAreaView, View, StyleSheet, Text } from 'react-native';
 
 const db = firebase.database().ref();
@@ -18,10 +18,9 @@ const Banner = ({title}) => (
 
 const ScheduleScreen = ({navigation}) => {
   const user = useContext(UserContext);
-  const canEdit = user && user.role == 'admin';
+  const canEdit = user && user.role == "admin";
 
   const [schedule, setSchedule] = useState({ title: '', courses: [] });
-  //const url = 'https://courses.cs.northwestern.edu/394/data/cs-courses.php';
 
   const view = (course) => {
     navigation.navigate(canEdit ? 'CourseEditScreen' : 'CourseDetailScreen', { course });

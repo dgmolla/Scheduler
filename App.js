@@ -6,6 +6,7 @@ import ScheduleScreen from './screens/scheduleScreen.js';
 import CourseDetailScreen from './screens/courseDetailScreen.js';
 import CourseEditScreen from './screens/courseEditScreen.js';
 import UserContext from './UserContext';
+import {firebase} from './firebase'
 
 const Stack = createStackNavigator();
 
@@ -20,13 +21,13 @@ const App = () => {
             component={ScheduleScreen}
             options={{ title: 'Schedule'}}
           />
-          <Stack.Screen name="CourseDetailScreen"
-            component={CourseDetailScreen}
-            options={{ title: 'Course detail'}}
-          />
           <Stack.Screen name="CourseEditScreen"
             component={CourseEditScreen}
             options={{ title: 'Course Editor'}}
+          />
+          <Stack.Screen name="CourseDetailScreen"
+            component={CourseDetailScreen}
+            options={{ title: 'Course detail'}}
           />
         </Stack.Navigator>
       </NavigationContainer>
