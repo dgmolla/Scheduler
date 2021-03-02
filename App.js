@@ -16,7 +16,6 @@ const Stack = createStackNavigator();
 const App = () => {
   const [user, setUser] = useState(null);
   const [auth, setAuth] = useState();
-  const yes = '';
 
   useEffect(() => {
     if (auth && auth.uid) {
